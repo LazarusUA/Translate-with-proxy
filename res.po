@@ -1,0 +1,1252 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* delivery_workflow
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-23 17:55+0000\n"
+"PO-Revision-Date: 2019-01-23 22:34+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: de\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_takes_driver
+msgid "Abholauftrag"
+msgstr "Abholauftrag"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:209
+#, python-format
+msgid "Add"
+msgstr "Hinzufügen"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:107
+#: code:addons/delivery_workflow/static/src/xml/main.xml:140
+#: code:addons/delivery_workflow/static/src/xml/main.xml:149
+#, python-format
+msgid "Add point"
+msgstr "Punkt hinzufügen"
+
+#. module: delivery_workflow
+#: model:ir.ui.view,arch_db:delivery_workflow.delivery_user_role_form
+msgid "Add user role"
+msgstr "Benutzerrolle hinzufügen"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route_point.py:43
+#: selection:delivery_workflow.route_point,type:0
+#, python-format
+msgid "Additional point"
+msgstr "Zusätzlicher Punkt"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/models/route_point.py:58
+#: code:addons/delivery_workflow/static/src/xml/main.xml:144
+#: code:addons/delivery_workflow/static/src/xml/main.xml:225
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_point_address
+#: model:ir.ui.view,arch_db:delivery_workflow.view_picking_form_inherit
+#, python-format
+msgid "Address"
+msgstr "Adresse"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:71
+#, python-format
+msgid "Alle"
+msgstr "Alle"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:91
+#, python-format
+msgid "Alle Lieferung"
+msgstr "Alle Lieferung"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/stock_picking.py:136
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_alt_city
+#, python-format
+msgid "Alternative city"
+msgstr "Alternative city"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/stock_picking.py:138
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_alt_zip
+#, python-format
+msgid "Alternative code"
+msgstr "Alternative code"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/stock_picking.py:137
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_alt_street
+#, python-format
+msgid "Alternative street"
+msgstr "Alternative street"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:203
+#: selection:delivery_workflow.user_role,color:0
+#, python-format
+msgid "Aqua"
+msgstr "Aqua"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route_point.py:57
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_point_arrival_time
+#, python-format
+msgid "Arrival time"
+msgstr "Ankunftszeit"
+
+#. module: delivery_workflow
+#: model:ir.ui.menu,name:delivery_workflow.menu_auto_routes
+#: model:ir.ui.view,arch_db:delivery_workflow.auto_routes_form
+msgid "Auto Routes"
+msgstr "Auto Routes"
+
+#. module: delivery_workflow
+#: model:ir.actions.act_window,name:delivery_workflow.auto_routes_form_action
+msgid "Auto routes"
+msgstr "Auto routes"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:197
+#, python-format
+msgid "Avoid"
+msgstr "Vermeiden"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route.py:77
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_avoid_tolls
+#, python-format
+msgid "Avoid tolls"
+msgstr "Mautgebühren vermeiden"
+
+#. module: delivery_workflow
+#: model:ir.ui.view,arch_db:delivery_workflow.delivery_workflow_route_form
+msgid "Back to draft"
+msgstr "Zurück zum Entwurf"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:210
+#, python-format
+msgid "Bericht öffnen"
+msgstr "Bericht öffnen"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:195
+#: selection:delivery_workflow.user_role,color:0
+#, python-format
+msgid "Black"
+msgstr "Schwarz"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:205
+#: selection:delivery_workflow.user_role,color:0
+#, python-format
+msgid "Blue"
+msgstr "Blau"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:208
+#, python-format
+msgid "Calc"
+msgstr "Calc"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:104
+#, python-format
+msgid "Calculate route"
+msgstr "Route berechnen"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:319
+#, python-format
+msgid "Calculate routes"
+msgstr "Routen berechnen"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:129
+#: code:addons/delivery_workflow/static/src/xml/main.xml:150
+#, python-format
+msgid "Cancel"
+msgstr "Stornieren"
+
+#. module: delivery_workflow
+#: model:ir.ui.view,arch_db:delivery_workflow.view_picking_form_inherit
+msgid "Cancel delivery"
+msgstr "Lieferung abbrechen"
+
+#. module: delivery_workflow
+#: model:ir.ui.view,arch_db:delivery_workflow.delivery_workflow_route_form
+msgid "Cancel route"
+msgstr "Route abbrechen"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route.py:55
+#: code:addons/delivery_workflow/models/route_point.py:52
+#: code:addons/delivery_workflow/models/stock_picking.py:141
+#: selection:delivery_workflow.route,state:0
+#: selection:delivery_workflow.route_point,state:0
+#: selection:stock.picking,delivery_state:0
+#, python-format
+msgid "Canceled"
+msgstr "Abgebrochen"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_sale_order_type_carrier
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_type_carrier
+msgid "Carrier Type"
+msgstr "Trägertyp"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_check_ami_reserve
+msgid "Check Ami Reserve"
+msgstr "Überprüfen Sie Ami Reserve"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_city
+msgid "City"
+msgstr "Stadt"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/models/route_point.py:56
+#: code:addons/delivery_workflow/static/src/xml/main.xml:145
+#: code:addons/delivery_workflow/static/src/xml/main.xml:226
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_point_comment
+#, python-format
+msgid "Comment"
+msgstr "Kommentar"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_settings_company_id
+msgid "Company"
+msgstr "Unternehmen"
+
+#. module: delivery_workflow
+#: model:ir.ui.view,arch_db:delivery_workflow.delivery_settings_form
+#: model:ir.ui.view,arch_db:delivery_workflow.delivery_settings_tree
+msgid "Configure delivery"
+msgstr "Zustellung konfigurieren"
+
+#. module: delivery_workflow
+#: model:ir.ui.view,arch_db:delivery_workflow.delivery_workflow_route_form
+msgid "Confirm"
+msgstr "Bestätigen"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route.py:52
+#: selection:delivery_workflow.route,state:0
+#, python-format
+msgid "Confirmed"
+msgstr "Bestätigt"
+
+#. module: delivery_workflow
+#: model:ir.ui.view,arch_db:delivery_workflow.delivery_settings_form
+msgid "Contained Packages"
+msgstr "Enthaltene Pakete"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route_point.py:59
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_point_coordinates
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_coordinates
+#, python-format
+msgid "Coordinates"
+msgstr "Koordinaten"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_country_id
+msgid "Country"
+msgstr "Land"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:106
+#: code:addons/delivery_workflow/static/src/xml/main.xml:128
+#: model:ir.ui.menu,name:delivery_workflow.menu_delivery
+#, python-format
+msgid "Create route"
+msgstr "Route erstellen"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:320
+#, python-format
+msgid "Create routes"
+msgstr "Routen erstellen"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_create_uid
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_point_create_uid
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_settings_create_uid
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_user_role_create_uid
+msgid "Created by"
+msgstr "Erstellt von"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_create_date
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_point_create_date
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_settings_create_date
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_user_role_create_date
+msgid "Created on"
+msgstr "Erstellt am"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route.py:59
+#: code:addons/delivery_workflow/models/route.py:63
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_current_point
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_current_point_id
+#, python-format
+msgid "Current point"
+msgstr "Aktueller Punkt"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:99
+#: code:addons/delivery_workflow/static/src/xml/main.xml:190
+#, python-format
+msgid "Current position"
+msgstr "Aktuelle Position"
+
+#. module: delivery_workflow
+#: selection:sale.order,type_carrier:0 selection:stock.picking,type_carrier:0
+msgid "DHL Domestic"
+msgstr "DHL Domestic"
+
+#. module: delivery_workflow
+#: selection:sale.order,type_carrier:0 selection:stock.picking,type_carrier:0
+msgid "DHL International"
+msgstr "DHL International"
+
+#. module: delivery_workflow
+#: selection:sale.order,type_carrier:0 selection:stock.picking,type_carrier:0
+msgid "DHL Paket"
+msgstr "DHL Paket"
+
+#. module: delivery_workflow
+#: selection:sale.order,type_carrier:0 selection:stock.picking,type_carrier:0
+msgid "DPD"
+msgstr "DPD"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_sale_order_delivery_date
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_delivery_date
+msgid "Date Of Delivery"
+msgstr "Lieferdatum"
+
+#. module: delivery_workflow
+#: model:ir.ui.view,arch_db:delivery_workflow.view_picking_form_inherit
+msgid "Delete driver"
+msgstr "Treiber löschen"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/stock_picking.py:147
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_delivery_state
+#, python-format
+msgid "Delivery State"
+msgstr "Lieferstatus"
+
+#. module: delivery_workflow
+#: model:ir.actions.act_window,name:delivery_workflow.delivery_settings_action
+msgid "Delivery configuration"
+msgstr "Auslieferungskonfiguration"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:38
+#: model:ir.model,name:delivery_workflow.model_delivery_workflow_settings
+#, python-format
+msgid "Delivery module configuration"
+msgstr "Liefermodulkonfiguration"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/js/route.js:1052
+#: code:addons/delivery_workflow/static/src/js/route.js:1796
+#: code:addons/delivery_workflow/static/src/js/route_old.js:419
+#: code:addons/delivery_workflow/static/src/js/route_old.js:1814
+#, python-format
+msgid "Delivery status"
+msgstr "Lieferstatus"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:190
+#: selection:delivery_workflow.user_role,role:0
+#, python-format
+msgid "Dispatcher"
+msgstr "Dispatcher"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_display_name
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_point_display_name
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_settings_display_name
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_user_role_display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route.py:75
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_distance
+#, python-format
+msgid "Distance"
+msgstr "Entfernung"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route_point.py:51
+#: code:addons/delivery_workflow/models/stock_picking.py:146
+#: selection:delivery_workflow.route_point,state:0
+#: selection:stock.picking,delivery_state:0
+#, python-format
+msgid "Done"
+msgstr "Erledigt"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route.py:51
+#: code:addons/delivery_workflow/models/route_point.py:47
+#: code:addons/delivery_workflow/models/stock_picking.py:142
+#: selection:delivery_workflow.route,state:0
+#: selection:delivery_workflow.route_point,state:0
+#: selection:stock.picking,delivery_state:0
+#, python-format
+msgid "Draft"
+msgstr "Entwurf"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route.py:47
+#: code:addons/delivery_workflow/models/settings.py:191
+#: selection:delivery_workflow.user_role,role:0
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_user_id
+#: model:ir.ui.view,arch_db:delivery_workflow.view_picking_form_inherit
+#, python-format
+msgid "Driver"
+msgstr "Treiber"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/js/route.js:1095
+#: code:addons/delivery_workflow/static/src/js/route.js:1839
+#: code:addons/delivery_workflow/static/src/js/route_old.js:472
+#: code:addons/delivery_workflow/static/src/js/route_old.js:1867
+#, python-format
+msgid "Drivers"
+msgstr "Treiber"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route.py:74
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_duration
+#, python-format
+msgid "Duration"
+msgstr "Dauer"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:100
+#: code:addons/delivery_workflow/static/src/xml/main.xml:191
+#, python-format
+msgid "End position"
+msgstr "Endposition"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,help:delivery_workflow.field_stock_picking_delivery_date
+msgid "Expected Date Of Delivery:                        The delivery time stamp provided by Shipment Service"
+msgstr "Voraussichtlicher Liefertermin: Der vom Versanddienst bereitgestellte Lieferzeitstempel"
+
+#. module: delivery_workflow
+#: selection:sale.order,type_carrier:0 selection:stock.picking,type_carrier:0
+msgid "Fedex"
+msgstr "Fedex"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:182
+#, python-format
+msgid "Fertige Lieferungen"
+msgstr "Fertige Lieferungen"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_sale_order_final_date
+msgid "Final Date"
+msgstr "Endgültiges Datum"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route.py:61
+#: code:addons/delivery_workflow/models/route.py:64
+#: code:addons/delivery_workflow/models/route_point.py:40
+#: selection:delivery_workflow.route_point,type:0
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_finish_point
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_finish_point_id
+#, python-format
+msgid "Finish point"
+msgstr "Endpunkt"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route.py:54
+#: selection:delivery_workflow.route,state:0
+#, python-format
+msgid "Finished"
+msgstr "Fertig"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:79
+#, python-format
+msgid "Frei"
+msgstr "Frei"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:207
+#: selection:delivery_workflow.user_role,color:0
+#, python-format
+msgid "Fuchsia"
+msgstr "Fuchsie"
+
+#. module: delivery_workflow
+#: selection:sale.order,type_carrier:0 selection:stock.picking,type_carrier:0
+msgid "GLS"
+msgstr "GLS"
+
+#. module: delivery_workflow
+#: model:ir.actions.server,name:delivery_workflow.ir_cron_get_picking_coordinate_ir_actions_server
+#: model:ir.cron,cron_name:delivery_workflow.ir_cron_get_picking_coordinate
+#: model:ir.cron,name:delivery_workflow.ir_cron_get_picking_coordinate
+msgid "Get picking coordinate"
+msgstr "Kommissionierkoordinate abrufen"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:52
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_settings_api_key
+#, python-format
+msgid "Google API key"
+msgstr "Google API-Schlüssel"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:196
+#: selection:delivery_workflow.user_role,color:0
+#, python-format
+msgid "Gray"
+msgstr "Grau"
+
+#. module: delivery_workflow
+#: model:ir.ui.view,arch_db:delivery_workflow.delivery_workflow_route_search_view
+msgid "Group By"
+msgstr "Gruppiere nach"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:67
+#: code:addons/delivery_workflow/static/src/xml/main.xml:308
+#, python-format
+msgid "Hide map"
+msgstr "Karte ausblenden"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_id
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_point_id
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_settings_id
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_user_role_id
+msgid "ID"
+msgstr "ICH WÜRDE"
+
+#. module: delivery_workflow
+#: selection:stock.picking,purchase_supplier_state:0
+msgid "In Our Truck"
+msgstr "In unserem LKW"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route_point.py:49
+#: code:addons/delivery_workflow/models/stock_picking.py:144
+#: selection:delivery_workflow.route_point,state:0
+#: selection:stock.picking,delivery_state:0
+#, python-format
+msgid "In order"
+msgstr "In order"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route.py:53
+#: code:addons/delivery_workflow/models/route_point.py:50
+#: code:addons/delivery_workflow/models/stock_picking.py:145
+#: selection:delivery_workflow.route,state:0
+#: selection:delivery_workflow.route_point,state:0
+#: selection:stock.picking,delivery_state:0
+#, python-format
+msgid "In progress"
+msgstr "In progress"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route_point.py:39
+#: selection:delivery_workflow.route_point,type:0
+#, python-format
+msgid "Intermediate start point"
+msgstr "Zwischenstartpunkt"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/stock_picking.py:671
+#, python-format
+msgid "It can be done in return picking only"
+msgstr "Dies kann nur im Gegenzug erfolgen"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route___last_update
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_point___last_update
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_settings___last_update
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_user_role___last_update
+msgid "Last Modified on"
+msgstr "Zuletzt geändert am"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_point_write_uid
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_write_uid
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_settings_write_uid
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_user_role_write_uid
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert von"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_point_write_date
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_write_date
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_settings_write_date
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_user_role_write_date
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisiert am"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/stock_picking.py:139
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_last_state
+#, python-format
+msgid "Last state"
+msgstr "Letzter Status"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route_point.py:61
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_end_latitude
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_point_latitude
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_start_latitude
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_settings_latitude
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_latitude
+#, python-format
+msgid "Latitude"
+msgstr "Breite"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:176
+#, python-format
+msgid "Lieferung in Auftrag"
+msgstr "Lieferung in Auftrag"
+
+#. module: delivery_workflow
+#: model:ir.actions.act_window,name:delivery_workflow.action_stock_picking_route_tree_view
+#: model:ir.ui.menu,name:delivery_workflow.menu_delivery_item
+msgid "Lieferungen Karte"
+msgstr "Lieferungen Karte"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:201
+#: selection:delivery_workflow.user_role,color:0
+#, python-format
+msgid "Lime"
+msgstr "Limette"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route_point.py:48
+#: code:addons/delivery_workflow/models/stock_picking.py:143
+#: selection:delivery_workflow.route_point,state:0
+#: selection:stock.picking,delivery_state:0
+#, python-format
+msgid "Loaded"
+msgstr "Geladen"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route_point.py:62
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_end_longitude
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_point_longitude
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_start_longitude
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_settings_longitude
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_longitude
+#, python-format
+msgid "Longitude"
+msgstr "Längengrad"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/js/route.js:2511
+#: model:ir.ui.view,arch_db:delivery_workflow.delivery_settings_form
+#: model:ir.ui.view,arch_db:delivery_workflow.view_picking_form_inherit
+#, python-format
+msgid "Map"
+msgstr "Karte"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:208
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_user_role_color
+#, python-format
+msgid "Marker color"
+msgstr "Markerfarbe"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:198
+#: selection:delivery_workflow.user_role,color:0
+#, python-format
+msgid "Maroon"
+msgstr "Kastanienbraun"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_mobile
+msgid "Mobile"
+msgstr "Handy, Mobiltelefon"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_model_id
+msgid "Model ID"
+msgstr "Modell-ID"
+
+#. module: delivery_workflow
+#: model:ir.ui.view,arch_db:delivery_workflow.delivery_workflow_route_tree
+msgid "My routes"
+msgstr "Meine Routen"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route.py:46
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_name
+#, python-format
+msgid "Name"
+msgstr "Name"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:82
+#: code:addons/delivery_workflow/static/src/xml/main.xml:311
+#, python-format
+msgid "Name or Code"
+msgstr "Name oder Code"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:204
+#: selection:delivery_workflow.user_role,color:0
+#, python-format
+msgid "Navy"
+msgstr "Marine"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:199
+#: selection:delivery_workflow.user_role,color:0
+#, python-format
+msgid "Olive"
+msgstr "Olive"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:201
+#, python-format
+msgid "Optimize"
+msgstr "Optimieren"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route.py:76
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_optimize
+#, python-format
+msgid "Optimize route"
+msgstr "Route optimieren"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route.py:49
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_points_order
+#, python-format
+msgid "Order"
+msgstr "Auftrag"
+
+#. module: delivery_workflow
+#: selection:sale.order,type_carrier:0 selection:stock.picking,type_carrier:0
+msgid "Own Delivery Service"
+msgstr "Eigener Lieferservice"
+
+#. module: delivery_workflow
+#: selection:sale.order,type_carrier:0 selection:stock.picking,type_carrier:0
+msgid "Packetversand"
+msgstr "Paketversand"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_phone
+msgid "Phone"
+msgstr "Telefon"
+
+#. module: delivery_workflow
+#: model:ir.ui.view,arch_db:delivery_workflow.delivery_workflow_route_form
+msgid "Pickings Detail"
+msgstr "Pickings Detail"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_point_ids
+msgid "Point"
+msgstr "Punkt"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_point_id
+msgid "Point ID"
+msgstr "Punkt Nr"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route_point.py:53
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_point_state
+#, python-format
+msgid "Point state"
+msgstr "Punktzustand"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route_point.py:44
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_point_type
+#, python-format
+msgid "Point type"
+msgstr "Punkttyp"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route.py:67
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_point_ids
+#, python-format
+msgid "Points"
+msgstr "Punkte"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route.py:48
+#: code:addons/delivery_workflow/models/route_point.py:60
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_point_polyline
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_polyline
+#, python-format
+msgid "Polyline"
+msgstr "Polylinie"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:230
+#, python-format
+msgid "Punkt hinzufügen"
+msgstr "Punkt hinzufügen"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_purchase_supplier_state
+msgid "Purchase State"
+msgstr "Kaufzustand"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/js/route.js:1090
+#: code:addons/delivery_workflow/static/src/js/route.js:1834
+#: code:addons/delivery_workflow/static/src/js/route_old.js:457
+#, python-format
+msgid "Purchase supplier status"
+msgstr "Status des Einkaufslieferanten"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:206
+#: selection:delivery_workflow.user_role,color:0
+#, python-format
+msgid "Purple"
+msgstr "Lila"
+
+#. module: delivery_workflow
+#: model:ir.model,name:delivery_workflow.model_sale_order
+msgid "Quotation"
+msgstr "Zitat"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route_point.py:41
+#: selection:delivery_workflow.route_point,type:0
+#, python-format
+msgid "Regular point"
+msgstr "Regelmäßiger Punkt"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_res_id
+msgid "Res ID"
+msgstr "Res ID"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:75
+#, python-format
+msgid "Reserved"
+msgstr "Reserviert"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_reserved_by
+msgid "Reserved by"
+msgstr "Reserviert von"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:85
+#, python-format
+msgid "Reservierte Lieferung"
+msgstr "Reservierte Lieferung"
+
+#. module: delivery_workflow
+#: model:ir.model,name:delivery_workflow.model_stock_return_picking
+msgid "Return Picking"
+msgstr "Rückholung Kommissionierung"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route_point.py:42
+#: selection:delivery_workflow.route_point,type:0
+#, python-format
+msgid "Return point"
+msgstr "Rückkehrpunkt"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/models/route.py:78
+#: code:addons/delivery_workflow/static/src/xml/main.xml:205
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_reversed_route
+#, python-format
+msgid "Reverse"
+msgstr "Umkehren"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:192
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_user_role_role
+#, python-format
+msgid "Role"
+msgstr "Rolle"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route_point.py:36
+#: code:addons/delivery_workflow/models/stock_picking.py:82
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_point_route_id
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_route_id
+#, python-format
+msgid "Route"
+msgstr "Route"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:116
+#, python-format
+msgid "Route Details"
+msgstr "Routendetails"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:120
+#, python-format
+msgid "Route name"
+msgstr "Routenname"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route_point.py:35
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_point_picking_id
+#, python-format
+msgid "Route point"
+msgstr "Routenpunkt"
+
+#. module: delivery_workflow
+#: model:ir.ui.view,arch_db:delivery_workflow.delivery_workflow_route_form
+msgid "Routes"
+msgstr "Routen"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_sale_order_id
+msgid "Sale order"
+msgstr "Verkaufsauftrag"
+
+#. module: delivery_workflow
+#: selection:sale.order,type_carrier:0 selection:stock.picking,type_carrier:0
+msgid "Selbstabholung"
+msgstr "Selbstabholung"
+
+#. module: delivery_workflow
+#: selection:stock.picking,purchase_supplier_state:0
+msgid "Send"
+msgstr "Senden"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:211
+#: code:addons/delivery_workflow/static/src/xml/main.xml:242
+#: code:addons/delivery_workflow/static/src/xml/main.xml:250
+#: code:addons/delivery_workflow/static/src/xml/main.xml:350
+#: code:addons/delivery_workflow/static/src/xml/main.xml:358
+#, python-format
+msgid "Set driver"
+msgstr "Fahrer einstellen"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:337
+#, python-format
+msgid "Set routes driver"
+msgstr "Routenfahrer einstellen"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:187
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_user_role_settings_id
+#: model:ir.ui.menu,name:delivery_workflow.menu_delivery_settings
+#, python-format
+msgid "Settings"
+msgstr "die Einstellungen"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:324
+#, python-format
+msgid "Show"
+msgstr "Show"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_signature
+#: model:ir.ui.view,arch_db:delivery_workflow.view_picking_form_inherit
+msgid "Signature"
+msgstr "Unterschrift"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_signer_name
+msgid "Signer"
+msgstr "Zeichen"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:197
+#: selection:delivery_workflow.user_role,color:0
+#, python-format
+msgid "Silver"
+msgstr "Silber"
+
+#. module: delivery_workflow
+#: selection:sale.order,type_carrier:0 selection:stock.picking,type_carrier:0
+msgid "Spedition"
+msgstr "Spedition"
+
+#. module: delivery_workflow
+#: selection:sale.order,type_carrier:0 selection:stock.picking,type_carrier:0
+msgid "Speditions"
+msgstr "Speditions"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route.py:58
+#: code:addons/delivery_workflow/models/route.py:62
+#: code:addons/delivery_workflow/models/route_point.py:38
+#: selection:delivery_workflow.route_point,type:0
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_start_point
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_start_point_id
+#, python-format
+msgid "Start point"
+msgstr "Startpunkt"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:58
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_settings_coordinates
+#, python-format
+msgid "Start point coordinates"
+msgstr "Startpunktkoordinaten"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route.py:60
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_start_time
+#, python-format
+msgid "Start time"
+msgstr "Startzeit"
+
+#. module: delivery_workflow
+#: model:ir.ui.view,arch_db:delivery_workflow.delivery_workflow_route_form
+msgid "Start und Kunden benachrichtigen"
+msgstr "Start und Kunden benachrichtigen"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_state_id
+msgid "State"
+msgstr "Zustand"
+
+#. module: delivery_workflow
+#: model:ir.actions.server,name:delivery_workflow.act_state_delivery_state_coherence
+#: model:ir.ui.menu,name:delivery_workflow.menu_states_coherence
+msgid "States coherence"
+msgstr "Staaten Kohärenz"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/route.py:56
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_state
+#, python-format
+msgid "Status"
+msgstr "Status"
+
+#. module: delivery_workflow
+#: model:ir.model,name:delivery_workflow.model_stock_move
+msgid "Stock Move"
+msgstr "Lagerbewegung"
+
+#. module: delivery_workflow
+#: model:ir.actions.act_window,name:delivery_workflow.delivery_workflow_route_route_action
+#: model:ir.ui.menu,name:delivery_workflow.menu_delivery_workflow_route
+msgid "Stored routes"
+msgstr "Gespeicherte Routen"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:231
+#: code:addons/delivery_workflow/static/src/xml/main.xml:251
+#: code:addons/delivery_workflow/static/src/xml/main.xml:359
+#, python-format
+msgid "Stornieren"
+msgstr "Stornieren"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_street
+msgid "Street"
+msgstr "Straße"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_street2
+msgid "Street2"
+msgstr "Straße Nummer 2"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:224
+#, python-format
+msgid "Suche"
+msgstr "Suche"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:202
+#: selection:delivery_workflow.user_role,color:0
+#, python-format
+msgid "Teal"
+msgstr "Teal"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:194
+#, python-format
+msgid "Time"
+msgstr "Zeit"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:87
+#: code:addons/delivery_workflow/static/src/xml/main.xml:93
+#: code:addons/delivery_workflow/static/src/xml/main.xml:178
+#: code:addons/delivery_workflow/static/src/xml/main.xml:184
+#, python-format
+msgid "Toggle"
+msgstr "Umschalten"
+
+#. module: delivery_workflow
+#: model:ir.model,name:delivery_workflow.model_stock_picking
+msgid "Transfer"
+msgstr "Transfer"
+
+#. module: delivery_workflow
+#: selection:sale.order,type_carrier:0 selection:stock.picking,type_carrier:0
+msgid "UPS"
+msgstr "UPS"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:188
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_settings_user_id
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_user_role_user_id
+#: model:ir.ui.view,arch_db:delivery_workflow.delivery_workflow_route_search_view
+#, python-format
+msgid "User"
+msgstr "Nutzer"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:61
+#: model:ir.actions.act_window,name:delivery_workflow.delivery_user_role_action
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_settings_user_role_ids
+#: model:ir.ui.view,arch_db:delivery_workflow.delivery_settings_form
+#, python-format
+msgid "User role"
+msgstr "Benutzer-Rolle"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/models/route.py:79
+#: code:addons/delivery_workflow/static/src/xml/main.xml:124
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_route_warehouse_id
+#, python-format
+msgid "Warehouse"
+msgstr "Warenhaus"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:200
+#: selection:delivery_workflow.user_role,color:0
+#, python-format
+msgid "Yellow"
+msgstr "Gelb"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/js/route.js:866
+#: code:addons/delivery_workflow/static/src/js/route_old.js:1473
+#, python-format
+msgid "You must confirm and start route before"
+msgstr "Sie müssen die Route vorher bestätigen und starten"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/stock_picking.py:692
+#, python-format
+msgid "You must enter Google API key first/nYou can do it in settings"
+msgstr "Sie müssen zuerst den Google-API-Schlüssel eingeben"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:53
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_settings_city
+#, python-format
+msgid "Your city"
+msgstr "Deine Stadt"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:55
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_settings_code
+#, python-format
+msgid "Your code"
+msgstr "Dein Code"
+
+#. module: delivery_workflow
+#: code:addons/delivery_workflow/models/settings.py:54
+#: model:ir.model.fields,field_description:delivery_workflow.field_delivery_workflow_settings_street
+#, python-format
+msgid "Your street"
+msgstr "Deine Straße"
+
+#. module: delivery_workflow
+#: model:ir.model.fields,field_description:delivery_workflow.field_stock_picking_zip
+msgid "Zip"
+msgstr "Postleitzahl"
+
+#. module: delivery_workflow
+#. openerp-web
+#: code:addons/delivery_workflow/static/src/xml/main.xml:220
+#, python-format
+msgid "Zusätzlichen Punkt"
+msgstr "Zusätzlichen Punkt"
+
+#. module: delivery_workflow
+#: model:ir.model,name:delivery_workflow.model_delivery_workflow_route
+msgid "delivery_workflow.route"
+msgstr "delivery_workflow.route"
+
+#. module: delivery_workflow
+#: model:ir.model,name:delivery_workflow.model_delivery_workflow_route_point
+msgid "delivery_workflow.route_point"
+msgstr "delivery_workflow.route_point"
+
+#. module: delivery_workflow
+#: model:ir.model,name:delivery_workflow.model_delivery_workflow_user_role
+msgid "delivery_workflow.user_role"
+msgstr "delivery_workflow.user_role"
