@@ -1,9 +1,10 @@
 from py_translator import Translator
+from polib import pofile
 
 
-class TranslateFile(object):
+class TranslatePO(object):
 
-    def __init__(self, dest: str, src: str = 'auto'):
+    def __init__(self, dest: str = 'en', src: str = 'auto'):
         self.proxy = {
             'https': 'http://95.47.116.93:58865',
         }
@@ -19,7 +20,7 @@ class TranslateFile(object):
         return f'{res}'
 
     @property
-    def proxy_list(self, f_proxy='proxylist.txt') -> list:
+    def proxy_list(self, f_proxy: str = 'proxylist.txt') -> list:
 
         with open(f_proxy, 'r') as file:
             lines = file.readlines()
@@ -38,44 +39,37 @@ class TranslateFile(object):
             except Exception:
                 continue
             else:
-                self.proxy_index = i
+                self.proxy_index += i
                 print(f'proxy: {proxy}')
                 return proxy
 
-    def f_translate(self, file: str, out='res.po'):
-        with open(file, 'r') as ofile:
-            text_file = ofile.readlines()
-            with open(out, 'w') as ifile:
+    def po_translate(self, file: str, out='res.po'):
+        po_file = pofile(file)
+
+        with open(out, 'w') as out_file:
+            for i, po_line in enumerate(po_file):
+
+                print(f'Loading: {i * 100 // len(po_file)}%', end='\r')
 
                 tr = Translator(proxies=self.proxy, timeout=30)
 
-                for i, line in enumerate(text_file):
-                    if i % 10 == 0:
-                        print(f'Loading: {i * 100 // len(text_file)}%',
-                              end='\r')
+                try:
+                    res = tr.translate(po_line.msgid,
+                                       dest=self.dest, src=self.src)
+                except Exception:
+                    self.proxy = {
+                        'https': 'http://%s' % self.verify_proxy()
+                    }
+                    tr = Translator(proxies=self.proxy, timeout=30)
+                    res = tr.translate(po_line.msgid,
+                                       dest=self.dest, src=self.src)
 
-                    before_lst = text_file[i - 1].split('\"')
-                    if 'msgstr' in line.split() and 'msgid ' in before_lst[0]:
-                        text = before_lst[1]
+                po_line.msgstr = res.text
+                out_file.write(f'{str(po_line)}\n\n')
 
-                        try:
-                            res = tr.translate(text,
-                                               dest=self.dest, src=self.src)
-                        except Exception:
-                            self.proxy = {
-                                'https': 'http://%s' % self.verify_proxy()
-                            }
-                            tr = Translator(proxies=self.proxy, timeout=30)
-                            res = tr.translate(text,
-                                               dest=self.dest, src=self.src)
-
-                        ifile.write(f"msgstr \"{res.text}\"\n")
-                    else:
-                        ifile.write(line)
-
-                print('\nFinish.')
+            print('\nFinish.')
 
 
 if __name__ == '__main__':
-    trans = TranslateFile(dest='de', src='en')
-    trans.f_translate('de.po')
+    trans = TranslatePO(dest='de', src='en')
+    trans.po_translate('de.po')
