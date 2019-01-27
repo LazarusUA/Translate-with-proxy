@@ -44,7 +44,7 @@ class TranslatePO(object):
                 print(f'proxy: {proxy}')
                 return proxy
 
-    def __translate(self, po_file, i=None):
+    def __translate(self, po_file):
         for i, po_line in enumerate(po_file):
 
             print(f'Loading: {i * 100 // len(po_file)}%', end='\r')
@@ -64,8 +64,6 @@ class TranslatePO(object):
 
             po_line.msgstr = res.text
 
-        print(f'\nFinish. {i}')
-
     @staticmethod
     def chunk(po_list, n):
         po_len = len(po_list)
@@ -80,17 +78,17 @@ class TranslatePO(object):
             th_list = []
 
             for i, p in enumerate(self.chunk(po_file, 10)):
-                th_list.append(Thread(target=self.__translate, args=(p, i)))
+                th_list.append(Thread(target=self.__translate, args=(p,)))
 
             for i in th_list:
                 i.start()
 
             for i in th_list:
                 i.join()
+        else:
+            self.__translate(po_file)
 
-        self.__translate(po_file)
-
-        print('FINISH')
+        print('\nFINISH')
 
         with open(out, 'w') as out_file:
             for po_line in po_file:
