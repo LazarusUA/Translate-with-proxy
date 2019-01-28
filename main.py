@@ -1,3 +1,5 @@
+#!./translate_venv/bin/python3
+
 from py_translator import Translator
 from polib import pofile
 from threading import Thread
