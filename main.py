@@ -5,6 +5,7 @@ from polib import pofile
 from threading import Thread
 from proxies import Proxies
 from queue import Queue
+from sys import argv
 
 
 class TranslatePO(object):
@@ -21,15 +22,18 @@ class TranslatePO(object):
         self.loading_len = 0
         self.th_size = th_size
 
+    def __progress(self):
+        self.loading_index += 1
+        progress = self.loading_index * 100 // self.loading_len
+        print(f'Loading: {progress}%{" " * 10}', end='\r')
+
     def __translate(self):
         while not self.pool.empty():
             line = self.pool.get()
+            self.__progress()
 
-            print(f'Loading: {self.loading_index * 100 // self.loading_len}%',
-                  end='\r')
-
-            curr_proxy = self.proxies.pool.get_nowait()
-            tr = Translator(proxies=curr_proxy, timeout=30)
+            curr_proxy = self.proxies.done_proxies.get()
+            tr = Translator(proxies=curr_proxy, timeout=10)
 
             res = None
 
@@ -37,14 +41,13 @@ class TranslatePO(object):
                 res = tr.translate(line.msgid,
                                    dest=self.dest, src=self.src)
             except Exception:
-                curr_proxy = self.proxies.pool.get_nowait()
-                tr = Translator(proxies=curr_proxy, timeout=30)
+                curr_proxy = self.proxies.done_proxies.get()
+                tr = Translator(proxies=curr_proxy, timeout=10)
                 res = tr.translate(line.msgid,
                                    dest=self.dest, src=self.src)
             finally:
-                self.proxies.pool.put_nowait(curr_proxy)
+                self.proxies.done_proxies.put(curr_proxy)
                 line.msgstr = res.text if res else ''
-                self.loading_index += 1
                 self.pool.task_done()
 
     def po_translate(self, file: str, out='res.po'):
@@ -72,5 +75,9 @@ class TranslatePO(object):
 
 
 if __name__ == '__main__':
+    file_path = 'de.po'
+    if len(argv) > 1:
+        file_path = argv[1]
+
     trans = TranslatePO(dest='de', src='en', proxy_size=40, th_size=20)
-    trans.po_translate('de.po')
+    trans.po_translate(file_path)

@@ -6,10 +6,9 @@ from threading import Thread
 class Proxies(object):
 
     def __init__(self, proxy_len, proxy_file='proxylist.txt'):
-        self.pool = Queue()
         self.finder_pool = Queue()
         self.__proxy_lines = self.__proxy_list(proxy_file)
-        self.verify_proxy_lines = []
+        self.done_proxies = List()
         self.proxy_len = proxy_len
 
     @staticmethod
@@ -22,7 +21,7 @@ class Proxies(object):
             ]
 
     def __clear(self):
-        if len(self.verify_proxy_lines) >= self.proxy_len:
+        if len(self.done_proxies) >= self.proxy_len:
             while not self.finder_pool.empty():
                 self.finder_pool.get()
                 self.finder_pool.task_done()
@@ -38,22 +37,31 @@ class Proxies(object):
                 pass
             else:
                 if self.finder_pool.qsize():
-                    print(f'Proxy: {proxy}')
-                    self.verify_proxy_lines.append(proxy)
-                    self.pool.put_nowait(proxy)
+                    progress = len(self.done_proxies) * 100 // self.proxy_len
+                    print(f'Find proxy: {progress}%', end='\r')
+                    self.done_proxies.put(proxy)
             finally:
                 self.finder_pool.task_done()
                 self.__clear()
 
-    def verify_proxies(self, timeout=2):
-        print('Verify proxies: START')
-
+    def verify_proxies(self, timeout=1, th_size=20):
         for proxy in self.__proxy_lines:
             self.finder_pool.put(proxy)
 
-        for i in range(20):
+        for i in range(th_size):
             th = Thread(target=self.__find, args=(timeout,))
             th.setDaemon(True)
             th.start()
 
         self.finder_pool.join()
+
+
+class List(list):
+    def put(self, el):
+        self.append(el)
+
+    def get_last(self):
+        return self.pop(-1) if self else None
+
+    def get(self):
+        return self.pop(0) if self else None
