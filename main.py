@@ -1,92 +1,66 @@
 from py_translator import Translator
 from polib import pofile
 from threading import Thread
+from proxies import Proxies
+from queue import Queue
 
 
 class TranslatePO(object):
 
-    def __init__(self, dest: str = 'en', src: str = 'auto'):
-        self.proxy = {
-            'https': 'http://95.47.116.93:58865',
-        }
-        self.proxy_index = 0
+    def __init__(self, dest: str = 'en', src: str = 'auto',
+                 proxy_size=20, th_size=0):
         self.dest = dest
         self.src = src
 
-    def __str__(self):
-        res = {
-            'proxy': self.proxy,
-            'proxy_index': self.proxy_index
-        }
-        return f'{res}'
+        self.proxies = Proxies(proxy_len=proxy_size)
+        self.proxies.verify_proxies()
+        self.pool = Queue()
+        self.loading_index = 0
+        self.loading_len = 0
+        self.th_size = th_size
 
-    @property
-    def proxy_list(self, f_proxy: str = 'proxylist.txt') -> list:
+    def __translate(self):
+        while not self.pool.empty():
+            line = self.pool.get()
 
-        with open(f_proxy, 'r') as file:
-            lines = file.readlines()
+            print(f'Loading: {self.loading_index * 100 // self.loading_len}%',
+                  end='\r')
 
-        return [line.replace('\n', '') for line in lines]
+            curr_proxy = self.proxies.pool.get_nowait()
+            tr = Translator(proxies=curr_proxy, timeout=30)
 
-    def verify_proxy(self) -> str:
-        proxy_list = self.proxy_list[self.proxy_index:]
-
-        for i, proxy in enumerate(proxy_list):
-            try:
-                translator = Translator(proxies={
-                    'https': 'http://%s' % proxy
-                }, timeout=2)
-                translator.translate('Hello', dest='de')
-            except Exception:
-                continue
-            else:
-                self.proxy_index += i
-                print(f'proxy: {proxy}')
-                return proxy
-
-    def __translate(self, po_file):
-        for i, po_line in enumerate(po_file):
-
-            print(f'Loading: {i * 100 // len(po_file)}%', end='\r')
-
-            tr = Translator(proxies=self.proxy, timeout=30)
+            res = None
 
             try:
-                res = tr.translate(po_line.msgid,
+                res = tr.translate(line.msgid,
                                    dest=self.dest, src=self.src)
             except Exception:
-                self.proxy = {
-                    'https': 'http://%s' % self.verify_proxy()
-                }
-                tr = Translator(proxies=self.proxy, timeout=30)
-                res = tr.translate(po_line.msgid,
+                curr_proxy = self.proxies.pool.get_nowait()
+                tr = Translator(proxies=curr_proxy, timeout=30)
+                res = tr.translate(line.msgid,
                                    dest=self.dest, src=self.src)
+            finally:
+                self.proxies.pool.put_nowait(curr_proxy)
+                line.msgstr = res.text if res else ''
+                self.loading_index += 1
+                self.pool.task_done()
 
-            po_line.msgstr = res.text
-
-    @staticmethod
-    def chunk(po_list, n):
-        po_len = len(po_list)
-        assert 0 < n <= po_len
-        s = po_len // n
-        return [po_list[p:p + s] for p in range(0, po_len, s)]
-
-    def po_translate(self, file: str, out='res.po', is_thread=False):
+    def po_translate(self, file: str, out='res.po'):
         po_file = pofile(file)
+        self.loading_len = len(po_file)
 
-        if is_thread:
-            th_list = []
+        for line in po_file:
+            self.pool.put(line)
 
-            for i, p in enumerate(self.chunk(po_file, 10)):
-                th_list.append(Thread(target=self.__translate, args=(p,)))
+        if self.th_size:
+            for i in range(self.th_size):
+                th = Thread(target=self.__translate)
+                th.setDaemon(True)
+                th.start()
 
-            for i in th_list:
-                i.start()
-
-            for i in th_list:
-                i.join()
+            self.pool.join()
         else:
-            self.__translate(po_file)
+            self.__translate()
 
         print('\nFINISH')
 
@@ -96,5 +70,5 @@ class TranslatePO(object):
 
 
 if __name__ == '__main__':
-    trans = TranslatePO(dest='de', src='en')
-    trans.po_translate('de.po', is_thread=True)
+    trans = TranslatePO(dest='de', src='en', proxy_size=40, th_size=20)
+    trans.po_translate('de.po')
