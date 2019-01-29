@@ -25,7 +25,7 @@ class TranslatePO(object):
     def __progress(self):
         self.loading_index += 1
         progress = self.loading_index * 100 // self.loading_len
-        print(f'Loading: {progress}%{" " * 10}', end='\r')
+        print('Loading: %s%%%s' % (progress, " " * 10), end='\r')
 
     def __translate(self):
         while not self.pool.empty():

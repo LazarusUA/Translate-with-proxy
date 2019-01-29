@@ -38,7 +38,7 @@ class Proxies(object):
             else:
                 if self.finder_pool.qsize():
                     progress = len(self.done_proxies) * 100 // self.proxy_len
-                    print(f'Find proxy: {progress}%', end='\r')
+                    print('Find proxy: %s%%' % progress, end='\r')
                     self.done_proxies.put(proxy)
             finally:
                 self.finder_pool.task_done()
