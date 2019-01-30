@@ -71,7 +71,7 @@ class TranslatePO(object):
 
         with open(out, 'w') as out_file:
             for po_line in po_file:
-                out_file.write(f'{str(po_line)}\n\n')
+                out_file.write('%s\n\n' % str(po_line))
 
 
 if __name__ == '__main__':

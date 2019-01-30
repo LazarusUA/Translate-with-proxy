@@ -17,7 +17,7 @@ class Proxies(object):
             lines = [line.replace('\n', '') for line in file.readlines()]
 
             return [
-                {'https': f'http://{line}'} for line in lines if line
+                {'https': 'http://%s' % line} for line in lines if line
             ]
 
     def __clear(self):
