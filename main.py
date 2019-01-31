@@ -2,10 +2,9 @@
 
 from py_translator import Translator
 from polib import pofile
-from threading import Thread
 from proxies import Proxies
-from queue import Queue
 from sys import argv
+from my_thread import ThreadPool
 
 
 class TranslatePO(object):
@@ -17,7 +16,6 @@ class TranslatePO(object):
 
         self.proxies = Proxies(proxy_len=proxy_size)
         self.proxies.verify_proxies()
-        self.pool = Queue()
         self.loading_index = 0
         self.loading_len = 0
         self.th_size = th_size
@@ -27,45 +25,37 @@ class TranslatePO(object):
         progress = self.loading_index * 100 // self.loading_len
         print('Loading: %s%%%s' % (progress, " " * 10), end='\r')
 
-    def __translate(self):
-        while not self.pool.empty():
-            line = self.pool.get()
-            self.__progress()
+    def __translate(self, line):
+        self.__progress()
 
+        curr_proxy = self.proxies.done_proxies.get()
+        tr = Translator(proxies=curr_proxy, timeout=10)
+
+        res = None
+
+        try:
+            res = tr.translate(line.msgid,
+                               dest=self.dest, src=self.src)
+        except Exception:
             curr_proxy = self.proxies.done_proxies.get()
             tr = Translator(proxies=curr_proxy, timeout=10)
-
-            res = None
-
-            try:
-                res = tr.translate(line.msgid,
-                                   dest=self.dest, src=self.src)
-            except Exception:
-                curr_proxy = self.proxies.done_proxies.get()
-                tr = Translator(proxies=curr_proxy, timeout=10)
-                res = tr.translate(line.msgid,
-                                   dest=self.dest, src=self.src)
-            finally:
-                self.proxies.done_proxies.put(curr_proxy)
-                line.msgstr = res.text if res else ''
-                self.pool.task_done()
+            res = tr.translate(line.msgid,
+                               dest=self.dest, src=self.src)
+        finally:
+            self.proxies.done_proxies.put(curr_proxy)
+            line.msgstr = res.text if res else ''
 
     def po_translate(self, file: str, out='res.po'):
         po_file = pofile(file)
         self.loading_len = len(po_file)
 
-        for line in po_file:
-            self.pool.put(line)
-
         if self.th_size:
-            for i in range(self.th_size):
-                th = Thread(target=self.__translate)
-                th.setDaemon(True)
-                th.start()
-
-            self.pool.join()
+            th = ThreadPool(self.th_size, self.__translate, data=po_file)
+            th.start()
+            th.join()
         else:
-            self.__translate()
+            for el in po_file:
+                self.__translate(el)
 
         print('\nFINISH')
 
