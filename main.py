@@ -61,7 +61,7 @@ class TranslatePO(object):
 
         with open(out, 'w') as out_file:
             for po_line in po_file:
-                out_file.write('%s\n\n' % str(po_line))
+                out_file.write('%s\n' % str(po_line))
 
 
 if __name__ == '__main__':
@@ -69,5 +69,5 @@ if __name__ == '__main__':
     if len(argv) > 1:
         file_path = argv[1]
 
-    trans = TranslatePO(dest='de', src='en', proxy_size=40, th_size=20)
+    trans = TranslatePO(dest='de', src='en', proxy_size=50, th_size=20)
     trans.po_translate(file_path)
