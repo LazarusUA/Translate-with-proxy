@@ -34,13 +34,11 @@ class TranslatePO(object):
         res = None
 
         try:
-            res = tr.translate(line.msgid,
-                               dest=self.dest, src=self.src)
+            res = tr.translate(line.msgid, dest=self.dest, src=self.src)
         except Exception:
             curr_proxy = self.proxies.done_proxies.get()
             tr = Translator(proxies=curr_proxy, timeout=10)
-            res = tr.translate(line.msgid,
-                               dest=self.dest, src=self.src)
+            res = tr.translate(line.msgid, dest=self.dest, src=self.src)
         finally:
             self.proxies.done_proxies.put(curr_proxy)
             line.msgstr = res.text if res else ''
