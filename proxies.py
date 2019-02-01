@@ -26,8 +26,13 @@ class Proxies(object):
                 self.finder_pool.get()
                 self.finder_pool.task_done()
 
+    def __loading(self):
+        progress = len(self.done_proxies) * 100 // self.proxy_len
+        print('Find proxy: %s%%' % progress, end='\r')
+
     def __find(self, timeout):
         while not self.finder_pool.empty():
+            self.__loading()
             proxy = self.finder_pool.get()
 
             try:
@@ -37,8 +42,6 @@ class Proxies(object):
                 pass
             else:
                 if self.finder_pool.qsize():
-                    progress = len(self.done_proxies) * 100 // self.proxy_len
-                    print('Find proxy: %s%%' % progress, end='\r')
                     self.done_proxies.put(proxy)
             finally:
                 self.finder_pool.task_done()
