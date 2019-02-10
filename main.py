@@ -1,9 +1,6 @@
-#!./translate_venv/bin/python3
-
 from py_translator import Translator
 from polib import pofile
 from proxies import Proxies
-from sys import argv
 from my_thread import ThreadPool
 
 
@@ -60,12 +57,3 @@ class TranslatePO(object):
         with open(out, 'w') as out_file:
             for po_line in po_file:
                 out_file.write('%s\n' % str(po_line))
-
-
-if __name__ == '__main__':
-    file_path = 'de.po'
-    if len(argv) > 1:
-        file_path = argv[1]
-
-    trans = TranslatePO(dest='de', src='en', proxy_size=50, th_size=20)
-    trans.po_translate(file_path)
